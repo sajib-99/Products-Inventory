@@ -1,0 +1,89 @@
+{% extends  './base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+  
+  <!-- Common Banner Part Start -->
+  <section id="cmn-banner9">
+    <div class="container banner-bg">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="cmn-banner-content">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Products</a></li>
+                <li class="breadcrumb-item"><a href="#">Garments</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{categories}}</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,256L48,229.3C96,203,192,149,288,154.7C384,160,480,224,576,218.7C672,213,768,139,864,128C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> -->
+  </section>
+  <!-- Common Banner Part End -->
+
+
+  <!-- Garments Part Start -->
+  
+  <section id="electronics">
+    <div class="container">
+    {% for post in productdetails %}
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="electronics-img">
+            <img id="#img_01" src="{{ post.img.url }}" data-zoom-image="{{ post.img.url }}" class="w-100" style="margin-bottom: 30px;" />
+
+              
+              <div class="row" id="thumb-image">
+                <div class="col-lg-4 col-4">
+                  <a href="#" data-image="{{ post.img.url }}" data-zoom-image="{{ post.img.url }}">
+                    <img id="#img_01" src="{{ post.img.url }}" class="w-100" />
+                  </a>
+                </div>
+                <div class="col-lg-4 col-4">
+                  <a href="#" data-image="{{ post.img2.url }}" data-zoom-image="{{ post.img2.url }}">
+                    <img id="#img_01" src="{{ post.img2.url }}" class="w-100" />
+                  </a>
+                </div>
+                <div class="col-lg-4 col-4">
+                  <a href="#" data-image="{{ post.img3.url }}" data-zoom-image="{{ post.img3.url }}">
+                    <img id="#img_01" src="{{ post.img3.url }}" class="w-100" />
+                  </a>
+                </div>
+              </div>
+  
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="electronics-details">
+            <h6>Product Specification:</h6>
+            <a href="#" class="badge badge-light">{{post.brand}}</a>   
+            <hr>
+            {{ post.description | safe }}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+  </section>
+
+  <!-- Garments Part End -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="{% static 'js/jquery.elevateZoom-3.0.8.min.js' %}"></script>
+  <script>
+    //initiate the plugin and pass the id of the div containing gallery images
+    $("#img_01").elevateZoom({
+      gallery:'thumb-image',
+      cursor: 'pointer',
+      galleryActiveClass: 'active',
+      imageCrossfade: false,
+      scrollZoom : true
+    }); 
+  </script>
+
+{% endblock %}

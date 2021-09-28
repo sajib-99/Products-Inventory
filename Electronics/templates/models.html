@@ -1,0 +1,104 @@
+{% extends  './base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+  <!-- Common Banner Part Start -->
+  <section id="cmn-banner5">
+    <div class="container banner-bg">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="cmn-banner-content">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Products</a></li>
+                <li class="breadcrumb-item"><a href="#">Electronics</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{categories}}</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,256L48,229.3C96,203,192,149,288,154.7C384,160,480,224,576,218.7C672,213,768,139,864,128C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> -->
+  </section>
+  <!-- Common Banner Part End -->
+
+  <!-- Brand Folder Part Start -->
+  <section id="brand">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <div class="row">
+
+            
+            {% for post in models %}
+            <div class="col-lg-4 col-6 col-md-4 mr10">
+              <div class="brand-folder">
+                <a href="{{post.uid}}" class="text-center">
+                  <p style="font-size: 18px;font-weight: 600;color: #454545;">Model No:</p>
+                  <h6 style="margin-bottom: 0;">{{ post.name }}</h6>
+                </a>
+              </div>
+            </div>
+            {% endfor %}
+             
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="row">
+            
+            <!-- <div class="col-lg-12 col-md-6">
+              <div class="product-category">
+                <h4>All Brands</h4>
+                <div class="mr18">
+                  <ul style="margin-bottom: 0;">
+                   
+                    {% for post in brands %}
+                    <li>
+                      <i class="far fa-dot-circle"></i>
+                      
+                      {{post.name}}
+                      <span class="float-right"> </span>
+                      
+                    </li>
+                    {% endfor %}
+    
+                  </ul>
+                </div>
+              </div>
+            </div> -->
+
+            <div class="col-lg-12 col-md-6">
+              <div class="product-category">
+                <h4>Electronic Categories</h4>
+                <div class="mr18">
+                  <ul style="margin-bottom: 0;">
+                    
+                    {% for post in items %}
+                    <li>
+                      <i class="far fa-dot-circle"></i>
+                      <a href="/Electronics/{{post.url}}">
+                      {{post.name}}
+                      <span class="float-right"> </span>
+                      </a>
+                    </li>
+                    {% endfor %}
+    
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Brand Folder Part End -->
+
+
+{% endblock %}

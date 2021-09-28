@@ -1,0 +1,279 @@
+{% extends  './base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<style>
+  .client-form .nav{
+    justify-content: center;
+  }
+  .client-form .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background: #009504;
+    color: #fff;
+  }
+  .client-form .nav-pills .nav-link {
+    color: #454545;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+</style>
+
+  <!-- Common Banner Part Start -->
+  <section id="cmn-banner6">
+    <div class="container banner-bg">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="cmn-banner-content">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Client Form</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,256L48,229.3C96,203,192,149,288,154.7C384,160,480,224,576,218.7C672,213,768,139,864,128C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> -->
+  </section>
+  <!-- Common Banner Part End -->
+  {% for message in messages  %}            
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong>Message : </strong> {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+  {% endfor %}    
+
+  <!-- Client Form Part Start -->
+  <section id="client-form">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 m-auto">
+          <div class="client-form">
+            <h5>Please put all your information for the product you want to export or import.</h5>
+            <ul class="nav nav-pills mb-3 mt-4" id="pills-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">I am an owner </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">I am an employee</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <h6 style="padding-top: 30px"> General Information </h6> <hr style="padding-bottom: 30px">
+           
+                <!-- -------- Owner Form -------- -->
+           
+                <form method="post" action="/clientform">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="inputText20">Full Name <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                <input type="text" class="form-control" id="ownerName" name="ownerName" placeholder="" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputText12">Company Name <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="ownerCompanyname" name="ownerCompanyname" placeholder="" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputText13">Designation <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="ownerDesignation" name="ownerDesignation" placeholder="" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputText14">Business Location <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="ownerBusinessLocation" name="ownerBusinessLocation" placeholder="" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputText17">Business Type <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="ownerBusinessType" name="ownerBusinessType" placeholder="" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputAddress">Address <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                <input type="text" class="form-control" id="ownerAddress" name="ownerAddress" placeholder="" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity">City <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="ownerCity" name="ownerCity" required>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputState">State <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="ownerState" name="ownerState">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputZip">Zip <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="ownerZip" name="ownerZip" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputEmail2">Email <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="email" class="form-control" id="ownerEmail" name="ownerEmail" placeholder="" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputText15">Phone Number <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="ownerPhone" name="ownerPhone" placeholder="" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputText16">Fax <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="ownerFax" name="ownerFax" placeholder="" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputText18">Website <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="ownerWebsite" name="ownerWebsite" placeholder="" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="inputText10">Client Requirement Message <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                <textarea class="form-control" id="ownerMessage" name="ownerMessage" rows="3" placeholder="" required></textarea>
+              </div>
+
+              <div class="text-center pt-2">
+                <button type="submit" class="btn btn-primary" name="ownerform">Submit</button>
+              </div>  
+            </form>
+
+
+
+              </div>
+              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                
+            <!-- -------- Employee Form -------- -->
+
+            <form method="post" action="/clientform">
+              {% csrf_token %}
+                 <h6 style="padding-top: 30px">Employee Information</h6> <hr style="padding-bottom: 30px">
+
+                  <div class="form-group">
+                <label for="inputText20">Full Name <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                <input type="text" class="form-control" id="EmployeeName" name="EmployeeName" placeholder="">
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputText12">Company Name <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="EmployeeCompanyname" name="EmployeeCompanyname" placeholder="">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputText13">Designation <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="EmployeeDesignation" name="EmployeeDesignation" placeholder="">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputText14">Business Location <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="EmployeeBusinessLocation" name="EmployeeBusinessLocation" placeholder="">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputText17">Business Type <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="EmployeeBusinessType" name="EmployeeBusinessType" placeholder="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputAddress">Address <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                <input type="text" class="form-control" id="EmployeeAddress" name="EmployeeAddress" placeholder="">
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity">City <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="EmployeeCity" name="EmployeeCity">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputState">State <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="EmployeeState" name="EmployeeState">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputZip">Zip <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="EmployeeZip" name="EmployeeZip">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputEmail2">Email <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="email" class="form-control" id="EmployeeEmail" name="EmployeeEmail" placeholder="">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputText15">Phone Number <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="EmployeePhone" name="EmployeePhone" placeholder="">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputText16">Fax <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="EmployeeFax" name="EmployeeFax" placeholder="">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputText18">Website <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                  <input type="text" class="form-control" id="EmployeeWebsite" name="EmployeeWebsite" placeholder="">
+                </div>
+              </div>
+
+                <h6 style="padding-top: 30px">Owner Information</h6> <hr style="padding-bottom: 30px">
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputText19">Owner Full Name <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                          <input type="text" class="form-control" id="OwnerName" name="OwnerName" placeholder="">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="inputText21">Owner Designation <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                          <input type="text" class="form-control" id="OwnerDesignation" name="OwnerDesignation" placeholder="">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputAddress">Owner Address <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                        <input type="text" class="form-control" id="OwnerAddress" name="OwnerAddress" placeholder="">
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputCity2">City <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                          <input type="text" class="form-control" id="OwnerCity" name="OwnerCity">
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputState2">State <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                          <input type="text" class="form-control" id="OwnerState" name="OwnerState">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="inputZip2">Zip <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                          <input type="text" class="form-control" id="OwnerZip" name="OwnerZip">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputEmail3">Owner Email <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                          <input type="email" class="form-control" id="OwnerEmail" name="OwnerEmail" placeholder="">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="inputText22">Owner Phone Number <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                          <input type="text" class="form-control" id="OwnerPhone" name="OwnerPhone" placeholder="">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputText23">Client Requirement Message <sup style="color: #eb596e;font-size: 16px;font-weight: bold;">*</sup></label>
+                        <textarea class="form-control" id="EmployeeMessage" name="EmployeeMessage" rows="3" placeholder=""></textarea>
+                      </div>
+                      <div class="text-center pt-2">
+                        <button type="submit" class="btn btn-primary" name="employeeform">Submit</button>
+                      </div>
+                </form>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Client Form Part End -->
+
+
+{% endblock %}

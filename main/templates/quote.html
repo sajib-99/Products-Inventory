@@ -1,0 +1,212 @@
+{% extends  './base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+  <!-- Common Banner Part Start -->
+  <section id="cmn-banner4">
+    <div class="container banner-bg">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="cmn-banner-content">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Add To Quote</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,256L48,229.3C96,203,192,149,288,154.7C384,160,480,224,576,218.7C672,213,768,139,864,128C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> -->
+  </section>
+  <!-- Common Banner Part End -->
+
+  {% for message in messages  %}            
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong>Message : </strong> {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+  {% endfor %}    
+
+  <!-- Enquiry Form Part Start -->
+  <section id="enquiry">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 m-auto">
+          <div class="enquiry-form mr9">
+            <p>Please fill up the following details with your requirements, we will reach you as soon as possible.</p>
+            <form method="post" action="/quote">
+            {% csrf_token %}
+              <div class="form-row">
+                <div class="col-md-6">
+                  <label class="sr-only" for="inlineFormInputGroupUsername">Name</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i class="fas fa-user"></i>
+                        </div>
+                      </div>
+                      <input type="text" class="form-control mr6" id="name" name="name" placeholder="Name *">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="sr-only" for="inlineFormInputGroupUsername">Company Name</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i class="fas fa-building"></i>
+                        </div>
+                      </div>
+                      <input type="text" class="form-control mr6" id="companyname" name="companyname" placeholder="Company Name *">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="sr-only" for="inlineFormInputGroupUsername">Email</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i class="fas fa-envelope"></i>
+                        </div>
+                      </div>
+                      <input type="email" class="form-control mr6" id="email" name="email" placeholder="Email *">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="sr-only" for="inlineFormInputGroupUsername">Phone</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i class="fas fa-phone-alt"></i>
+                        </div>
+                      </div>
+                      <input type="text" class="form-control mr6" id="phone" name="phone" placeholder="Phone Number *">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="sr-only" for="inlineFormInputGroupUsername">Country</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i class="fas fa-globe-asia"></i>
+                        </div>
+                      </div>
+                      <input type="text" class="form-control mr6" id="country" name="country" placeholder="Country *">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="sr-only" for="inlineFormInputGroupUsername">Products</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i class="fab fa-product-hunt"></i>
+                        </div>
+                      </div>
+                      <select id="product" name="product" class="form-control mr6">
+                        <option selected>Products *</option>
+                        <option style="color: #fff;font-weight: 600;font-size: 18px;background: #2cb978;">Electronics</option>
+                        <option>Refrigerator</option>
+                        <option>TV</option>
+                        <option>AC</option>
+                        <option>Washing Machine</option>
+                        <option>Laptop</option>
+                        <option>Handset</option>
+                        <option>Microwave Oven</option>
+                        <option>Electric Iron</option>
+                        <option>Rice Cooker</option>
+                        <option>Electric Kettle</option>
+                        <option>Vacuum Cleaner</option>
+                        <option style="color: #fff;font-weight: 600;font-size: 18px;background: #2cb978;">Garments</option>
+                        <option>Shirt</option>
+                        <option>T-shirt & Polo Shirt</option>
+                        <option>Jeans</option>
+                        <option>Panjabi</option>
+                        <option>Ladies</option>
+                        <option style="color: #fff;font-weight: 600;font-size: 18px;background: #2cb978;">Cosmetics</option>
+                        <option>Blushes</option>
+                        <option>Eye Shadow</option>
+                        <option>Eyeliner</option>
+                        <option>Eyebrow pencil</option>
+                        <option>Mascara</option>
+                        <option>Highlighter</option>
+                        <option>Make up brush sets</option>
+                        <option>Nail polish</option>
+                        <option>Nail polish Remover</option>
+                        <option>Makeup remover cotton pads</option>
+                        <option>Moisturizer</option>
+                        <option>Other Cosmetics</option>
+                        <option style="color: #fff;font-weight: 600;font-size: 18px;background: #2cb978;">Daily Needs</option>
+                        <option>Grains & Bread</option>
+                        <option>Oil & Dairy</option>
+                        <option>Herbs & Spices</option>
+                        <option>Salt & Sugar Brands</option>
+                        <option>Honey Brands</option>
+                        <option>Sauce (Tomato & Soya)</option>
+                        <option>Snacks & Bread</option>
+                        <option>Vinegar</option>
+                        <option>Dry fruits & Nuts</option>
+                        <option>Coffee</option>
+                        <option>Tea</option>
+                        <option style="color: #fff;font-weight: 600;font-size: 18px;background: #2cb978;">Pharmaceuticals</option>
+                        <option>Antihistamine</option>
+                        <option>Anti-Depressants</option>
+                        <option>NSAIDs</option>
+                        <option>Analgesic/ Antipyretic</option>
+                        <option>Bone care</option>
+                        <option>Cardiovascular</option>
+                        <option>Vitamin & Mineral</option>
+                        <option>Antibacterial</option>
+                        <option>Antiemetic</option>
+                        <option>Antidiabetic</option>
+                        <option>Antipsychotic</option>
+                        <option>Antiulcerant</option>
+                        <option>Anticonvulsant/ Antiepileptic</option>
+                        <option>Anti-Parkinson’s</option>
+                        <option>Cream & Ointment</option>
+                        <option>Antiviral</option>
+                        <option>Ophthalmic</option>
+                        <option>Respiratory Care</option>
+                        <option>Biotech and Oncology</option>
+                        <option>Others</option>
+                        <option>Anti protozoal</option>
+                        <option>Antifungal</option>
+                        <option>Laxative</option>
+                        <option>Antiobesity</option>
+                        <option>Antimigrane</option>
+                        <option>α-Blocker</option>
+                        <option>Antihemorrhagic</option>
+                        <option>Antigout</option>
+                        <option>Antispasmodic</option>
+                        <option>Muscle relaxant</option>
+                        <option>Sugar Supplement</option>
+                        <option>Bile preparation</option>
+                        <option>PDE 5 Inhibitor</option>
+                        <option>Diuretic</option>
+                        <option>Sedative & Hypnotic</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <textarea class="form-control" id="quotes" name="quotes" rows="3" placeholder="Quote"></textarea>
+                  </div>
+                </div>
+                <div class="col-md-12 text-right">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Enquiry Form Part End -->
+
+
+{% endblock %}

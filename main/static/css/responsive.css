@@ -1,0 +1,290 @@
+/* ====================================================================================================
+                                        Extra Small Device
+====================================================================================================== */
+@media(max-width: 575.98px){
+  #sub-navbar {
+    padding-bottom: 10px;
+}
+  .sub-content{
+    text-align: center!important;
+    margin-bottom: 5px;
+  }
+  .navbar-light .navbar-toggler {
+    border-color: transparent;
+  }
+  button:focus {
+    outline: 0;
+  }
+  .navbar{
+    z-index: 9999;
+  }
+  .navbar-toggler i{
+    color: #ffffff;
+    font-size: 28px;
+  }
+  .navbar-collapse {
+    text-align: center;
+    background: #454545;
+    padding-top: 10px;
+    padding-bottom: 40px;
+  }
+  .dropdown-menu {
+    text-align: center;
+  }
+  .mr1{
+    display: inline-block;
+  }
+  .slider-banner{
+    padding-top: 170px;
+    padding-bottom: 150px;
+  }
+  .submenu-item{
+    display: none;
+  }
+  .all-content img{
+    margin-bottom: 30px;
+  }
+  .footer-content{
+    margin-bottom: 15px;
+  }
+  #footer{
+    padding-top: 50px;
+    padding-bottom: 35px;
+  }
+  .mr20{
+    margin-bottom: 30px;
+  }
+  .map{
+    margin-bottom: 30px;
+  }
+  #map{
+    margin-bottom: 50px;
+  }
+  .mr21{
+    margin-bottom: 15px;
+  }
+  .mr3{
+    height: 215px;
+  }
+  .pagination{
+    margin-top: 0;
+  }
+  #faq .card .card-header .btn{
+    white-space: normal;
+  }
+  .electronics-details{
+    margin-top: 30px;
+  }
+}
+@media(width:320px){
+  .banner-content h6{
+    font-size: 27px;
+  }
+  .banner-content h5{
+    font-size: 43px;
+  }
+  .banner-content .btn{
+    font-size: 13px;
+  }
+  .map iframe{
+    height: 280px;
+  }
+}
+
+/* =======================================================================================================
+                                                  Small Device
+======================================================================================================== */
+@media(min-width:576px) and (max-width:767.98px){
+  #sub-navbar {
+    padding-bottom: 10px;
+}
+  .sub-content{
+    text-align: center!important;
+    margin-bottom: 5px;
+  }
+  .navbar-light .navbar-toggler {
+    border-color: transparent;
+  }
+  button:focus {
+    outline: 0;
+  }
+  .navbar{
+    z-index: 9999;
+  }
+  .navbar-toggler i{
+    color: #ffffff;
+    font-size: 28px;
+  }
+  .navbar-collapse {
+    text-align: center;
+    background: #454545;
+    padding-top: 10px;
+    padding-bottom: 40px;
+  }
+  .dropdown-menu {
+    text-align: center;
+  }
+  .mr1{
+    display: inline-block;
+  }
+  .slider-banner{
+    padding-top: 170px;
+    padding-bottom: 150px;
+  }
+  .submenu-item{
+    display: none;
+  }
+  .all-content img{
+    margin-bottom: 30px;
+  }
+  .footer-content{
+    margin-bottom: 25px;
+  }
+  #footer{
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+  .footer-content h6{
+    font-size: 19px;
+  }
+  .mr20{
+    margin-bottom: 30px;
+  }
+  .map{
+    margin-bottom: 30px;
+  }
+  #map{
+    margin-bottom: 50px;
+  }
+  .mr21{
+    margin-bottom: 15px;
+  }
+  .pagination{
+    margin-top: 0;
+  }
+  .pharmacy-folder a{
+    font-size: 17px;
+  }
+  .electronics-details{
+    margin-top: 30px;
+  }
+}
+/* =======================================================================================================
+                                                Medium Device 
+==========================================================================================================*/
+@media(min-width:768px) and (max-width:991.98px){
+  #sub-navbar {
+    padding-bottom: 10px;
+}
+  .sub-content{
+    text-align: center!important;
+    margin-bottom: 5px;
+  }
+  .navbar-light .navbar-toggler {
+    border-color: transparent;
+  }
+  button:focus {
+    outline: 0;
+  }
+  .navbar{
+    z-index: 9999;
+  }
+  .navbar-toggler i{
+    color: #ffffff;
+    font-size: 28px;
+  }
+  .navbar-collapse {
+    text-align: center;
+    background: #454545;
+    padding-top: 10px;
+    padding-bottom: 40px;
+  }
+  .dropdown-menu {
+    text-align: center;
+  }
+  .mr1{
+    display: inline-block;
+  }
+  .slider-banner{
+    padding-top: 170px;
+    padding-bottom: 150px;
+  }
+  .submenu-item{
+    display: none;
+  }
+  .all-content img{
+    margin-bottom: 30px;
+  }
+  .footer-content{
+    margin-bottom: 25px;
+  }
+  #footer{
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+  .map{
+    margin-bottom: 30px;
+  }
+  #map{
+    margin-bottom: 50px;
+  }
+  .map iframe{
+    height: 300px;
+  }
+  .pagination{
+    margin-top: 0;
+  }
+  .electronics-details{
+    margin-top: 30px;
+  }
+}
+
+/* =================================================================================================
+                                             Large Device
+==================================================================================================== */
+@media(min-width:992px) and (max-width:1199.98px){
+  .sub-content a h6{
+    font-size: 13px;
+  }
+  .navbar-light .navbar-nav .nav-link{
+    font-size: 10px;
+  }
+  .navbar-brand img{
+    width: 100%;
+  }
+  .footer-content h6{
+    font-size: 17px;
+  }
+  .footer-content a{
+    font-size: 16px;
+  }
+  .footer-content p{
+    font-size: 16px;
+  }
+  .container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar{
+    padding: 0;
+  }
+  .slider-banner{
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  .banner-content h5{
+    font-size: 41px;
+  }
+  .key-content .btn{
+    font-size: 14px;
+  }
+  .product-category ul li a{
+    font-size: 15px;
+  }
+  .product-category h4{
+    font-size: 18px;
+  }
+  #faq .card .card-header .btn{
+    white-space: normal;
+  }
+}

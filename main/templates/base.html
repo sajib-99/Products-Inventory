@@ -1,0 +1,222 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SheBa Enterprises LLC</title>
+  <link rel="icon" href="{% static 'images/icon.png' %}" type="image/gif" sizes="16x16">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+</head>
+<body>
+   <!-- Sub Navbar Part Start -->
+  <section id="sub-navbar">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="sub-content">
+            <a href="mailto:info@shebaenterprisesllc.com"><h6 style="margin-bottom: 0;"><i class="fas fa-envelope"></i>info@shebaenterprisesllc.com</h6></a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="sub-content">
+            <a href="tel:+12032315300"><h6 style="margin-bottom: 0;"><i class="fas fa-phone-alt"></i>+1 203 231 5300</h6></a>
+            <a href="tel:+8801824570690"><h6 style="margin-bottom: 0;"><i class="fas fa-phone-alt mr15"></i>+880 1824 570690</h6></a>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="sub-content text-right">
+            <a href="https://www.facebook.com/SheBa-Enterprises-LLC-110229667881916"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/sheba-enterprises-llc"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Sub Navbar Part End -->
+  
+   <!-- Navbar Part Start -->
+   <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="{% static '/images/logo2.png' %}" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Overview
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="/about">About Us</a></li>
+            <li><a class="dropdown-item" href="/mission">Mission</a></li>
+            <li><a class="dropdown-item" href="/vision">Vision</a></li>
+            <!-- <li><a class="dropdown-item" href="../pages/philosophy.html">Philosophy</a></li> -->
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="/Electronics">Electronics</a></li>
+            <li><a class="dropdown-item" href="/Garments">Garments</a></li>
+            <li><a class="dropdown-item" href="/Cosmetics">Cosmetics</a></li>
+            <li><a class="dropdown-item" href="/DailyNeeds">Daily Needs</a></li>
+            <li><a class="dropdown-item" href="/Pharmaceuticals">Pharmaceuticals</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/partners">Partners</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/clientform">Client Form</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/career">Careers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mr1" href="/quote">Add To Quote</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+  <!-- Navbar Part End -->
+  <!-- Message Alart -->
+
+  
+
+  <!-- Message Alart End-->
+
+  {% block content %}
+  {% endblock %}
+
+
+  <!-- Footer Part Start -->
+  <footer id="footer">
+    <!-- <svg class="wave5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,192L48,181.3C96,171,192,149,288,122.7C384,96,480,64,576,85.3C672,107,768,181,864,186.7C960,192,1056,128,1152,85.3C1248,43,1344,21,1392,10.7L1440,0L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-8">
+          <div class="footer-content">
+            <h5>
+              <a href="#">
+                <img src="{% static '/images/logo2.png' %}" alt="logo">
+              </a>
+            </h5>
+            <p style="text-align: justify;">
+              <b>SheBa Enterprise LLC</b> is one of the leading international company in various aspects of import and export products. We have diversified our company by providing Export, Import, Distributor, Whole Seller, and Trading with Competitive Price.
+             </p>
+            <a href="https://www.facebook.com/SheBa-Enterprises-LLC-110229667881916"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/sheba-enterprises-llc"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-4">
+          <div class="footer-content">
+            <h6 class="mr4">Quick Links</h6>
+            <ul style="margin-bottom: 0;">
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/partners">Our Partners</a></li>
+              <li><a href="/clientform">Client Form</a></li>
+              <li><a href="/career">Careers</a></li>
+              <li><a href="/contact">Contact Us</a></li>
+              <li><a href="/policy">Terms & Condition</a></li>
+              <li><a href="/policy">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="footer-content">
+            <h6 class="mr4">International Headquarters</h6>
+            <p>1318 Kossuth Street Bridgeport,<br>
+               CT-06608, USA</p>
+            <p><a href="tel:+12032315300">TEL: +1 203 231 5300 (Direct)</a><br>
+              <a href="tel:+12038034430">TEL: +1 203 803 4430 (Work)</a></p>
+            <a href="mailto:info@shebaenterprisesllc.com" style="color: #454545;">info@shebaenterprisesllc.com</a> 
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="footer-content">
+            <h6 class="mr4 mr5">Bangladesh Headquarters</h6>
+            <p style="color: #009504;">House – 951, Road – 14<br>
+              Avenue – 02, Mirpur DOHS<br>
+              Mirpur-12, Dhaka-1216</p>
+            <p><a href="tel:+8801824570690" style="color: #009504;">Cell: (+880) 1824 570690</a></p>
+            <a href="mailto:info@shebaenterprisesllc.com" style="color: #009504;">info@shebaenterprisesllc.com</a> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer Part End -->
+
+  <!-- Footer Bottom Part Start -->
+  <section id="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="footer-btm">
+            <p style="margin-bottom: 0;">Copyright ©  {% now "Y" %} Sheba Enterprises LLC</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer Bottom Part End -->
+
+  <!-- ChatBox Part Start -->
+  <!-- <div class="open-button" >
+    <img src="./images/messenger.png" alt="ChatBox" onclick="openForm()">
+  </div>
+
+  <div class="chat-popup" id="myForm">
+    <form action="" class="form-container">
+      <img src="./images/logo2.png" alt="logo" style="margin-bottom: 10px;">
+      <textarea placeholder="Type your message.." name="msg" required></textarea>
+
+      <button type="submit" class="btn">Send</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div> -->
+  <!-- ChatBox Part End -->
+
+ 
+  <script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/slick.min.js' %}"></script>
+  <script src="{% static 'js/waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+  </script>
+</body>
+</html>
